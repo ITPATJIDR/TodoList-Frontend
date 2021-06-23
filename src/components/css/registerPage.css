@@ -1,0 +1,52 @@
+.register-Page-Main {
+    margin-left: 38%;
+    margin-top: 10%;
+    background-color: #f2b138;
+    width: 400px;
+    height: 400px;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+    color: #353d40;
+    display: flex;
+    justify-content: center;
+}
+
+.register-Input-main {
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+}
+
+.register-Header {
+    font-size: 25px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+}
+
+.register-Label {
+    margin: 15px 0px 0px 0px;
+    font-size: 18px;
+}
+
+.user-Input {
+    width: 300px;
+    height: 45px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    padding: 10px;
+    margin-top: 5px;
+}
+
+.register-Button {
+    width: 300px;
+    height: 45px;
+    margin-top: 10%;
+    background: #003f63;
+    border-radius: 10px;
+    border: none;
+    color: #d9d9d9;
+    font-size: 20px;
+    font-weight: bold;
+}
