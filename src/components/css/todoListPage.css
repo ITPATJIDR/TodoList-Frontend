@@ -1,0 +1,93 @@
+.todoList-Main {
+    margin-top: 80px;
+    background-color: #f2b138;
+    width: 400px;
+    height: 600px;
+    border-radius: 10px;
+    box-shadow: rgb(0 0 0 / 12%) 0px 1px 3px, rgb(0 0 0 / 24%) 0px 1px 2px;
+    color: #353d40;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+}
+
+.todoList-Header {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+.todoList-Title {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.todoList-Body {
+    margin-top: 20px;
+    height: 460px;
+    width: 350px;
+    overflow: auto;
+    margin-left: 10px;
+}
+
+.todoList-Task {
+    font-size: 20px;
+    margin-left: 30%;
+    margin-top: 10px;
+}
+
+.plus-Icon {
+    width: 40px;
+    padding: 1px;
+    border-radius: 5px;
+}
+
+.plus-Icon:hover {
+    background: #db8727;
+    transition: 1s background;
+}
+
+.todoList-List {
+    width: auto;
+    height: 50px;
+    background: #003f63;
+    margin-top: 15px;
+    color: white;
+    border-radius: 10px;
+    padding: 14px 0px 0px 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.todoList-List-Body {
+    margin-right: 80px;
+    width: 200px;
+}
+
+.todoList-List-Footer {
+    margin-right: 10px;
+}
+
+.todoList-Footer {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.todoList-addTodo,
+.todoList-logOut {
+    width: 175px;
+    background: #003f63;
+    height: 40px;
+    margin: 10px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.todoList-Body::-webkit-scrollbar {
+    width: 10px;
+}

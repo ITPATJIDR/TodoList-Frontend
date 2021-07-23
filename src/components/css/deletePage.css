@@ -1,0 +1,37 @@
+.deletePage-Main {
+    margin-top: 260px;
+    background-color: #f2b138;
+    width: 400px;
+    height: 325px;
+    border-radius: 10px;
+    box-shadow: rgb(0 0 0 / 12%) 0px 1px 3px, rgb(0 0 0 / 24%) 0px 1px 2px;
+    color: #353d40;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+}
+
+.deletePage-Header {
+    margin-top: 90px;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.deletePage-Body {
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+    width: 350px;
+}
+
+.deletePage-Button {
+    width: 150px;
+    height: 40px;
+    background: #003f63;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+}

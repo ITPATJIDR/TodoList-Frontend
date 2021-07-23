@@ -1,37 +1,29 @@
 import React, { useState } from "react";
-import axios from "axios";
 import "../css/registerPage.css";
+import ErrorMessage from "../utils/errorMessage";
+import { registerRequest } from "../../actions";
+import { useDispatch, useSelector } from "react-redux";
 
 const INITIALSTATE = {
     username: "",
     password: "",
-    error: "",
 };
-
-const REACT_APP_API_URL = process.env.REACT_APP_API_URL;
 
 const RegisterPage = () => {
     const [user, setUser] = useState(INITIALSTATE);
+    const dispatch = useDispatch();
+    const noti = useSelector((state) => state.noti);
 
-    const { username, password, error } = user;
+    const { username, password } = user;
 
     const handleChange = (e) => {
         const { name, value } = e.target;
         setUser({ ...user, [name]: value });
     };
 
-    const handleSubmit = () => {
-        axios
-            .post(`${REACT_APP_API_URL}/user/register`, user)
-            .then((res) => console.log(res))
-            .catch((error) => {
-                if (error.response) {
-                    console.log(error.response.data);
-                    console.log(error.response.status);
-                    console.log(error.response.headers);
-                }
-            });
-
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        dispatch(registerRequest(user));
         setUser(INITIALSTATE);
     };
 
@@ -67,6 +59,9 @@ const RegisterPage = () => {
                     Register
                 </button>
             </div>
+            {noti.showMessage ? (
+                <ErrorMessage errorMessage={noti.errorMessage} />
+            ) : null}
         </div>
     );
 };

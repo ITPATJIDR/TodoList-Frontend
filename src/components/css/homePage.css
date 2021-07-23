@@ -1,0 +1,61 @@
+.homePage-main {
+    margin-top: 140px;
+    background-color: #f2b138;
+    width: 400px;
+    height: 400px;
+    border-radius: 10px;
+    box-shadow: rgb(0 0 0 / 12%) 0px 1px 3px, rgb(0 0 0 / 24%) 0px 1px 2px;
+    color: #353d40;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.homePage-title {
+    font-size: 50px;
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+    flex-direction: column;
+    width: 300px;
+    height: 100%;
+}
+
+.todo-Title {
+    padding-left: 66px;
+}
+
+.homePage-button {
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+    height: auto;
+    width: auto;
+}
+
+.homePage-Button-Login,
+.homePage-Button-Register {
+    width: 300px;
+    height: 50px;
+    margin-top: 5%;
+    background: #003f63;
+    border-radius: 10px;
+    border: none;
+    color: #d9d9d9;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.homePage-Button-Login:hover,
+.homePage-Button-Register:hover {
+    width: 300px;
+    height: 50px;
+    margin-top: 5%;
+    background: #01324f;
+    border-radius: 10px;
+    border: none;
+    color: #d9d9d9;
+    font-size: 20px;
+    font-weight: bold;
+    transition: 1s background;
+}

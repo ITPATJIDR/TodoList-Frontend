@@ -1,11 +1,16 @@
-import { GET_TOKEN } from "../actions/type";
+import { GET_TOKEN_SUCCESS } from "../actions/types";
 
-const token = "";
+const INITIALSTATE = {
+    token: null,
+};
 
-const tokenReducer = (state = token, action) => {
+const tokenReducer = (state = INITIALSTATE, action) => {
     switch (action.type) {
-        case GET_TOKEN:
-            return action.payload;
+        case GET_TOKEN_SUCCESS:
+            return {
+                ...state,
+                token: action.payload,
+            };
         default:
             return state;
     }

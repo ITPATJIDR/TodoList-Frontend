@@ -1,7 +1,6 @@
-import { DISPATCH_LOGIN, GET_USER } from "../actions/types";
+import { DISPATCH_LOGIN, LOGOUT } from "../actions/types";
 
 const INITIALSTATE = {
-    user: [],
     isLogged: false,
 };
 
@@ -11,6 +10,11 @@ export default (state = INITIALSTATE, action) => {
             return {
                 ...state,
                 isLogged: true,
+            };
+        case LOGOUT:
+            return {
+                ...state,
+                isLogged: false,
             };
         default:
             return state;
