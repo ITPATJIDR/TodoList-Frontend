@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useReducer } from "react";
 import "../css/todoListPage.css";
 import { useSelector, useDispatch } from "react-redux";
 import {
@@ -6,15 +6,16 @@ import {
     RiDeleteBack2Fill,
     RiCheckboxBlankCircleFill,
 } from "react-icons/ri";
-import { logOut } from "../../actions";
+import { logOut, getTodoRequest } from "../../actions";
 import { io } from "socket.io-client";
 
 const TodoListPage = () => {
     const todo = useSelector((state) => state.todo);
+    const user = useSelector((state) => state.user);
     const dispatch = useDispatch();
     const username = todo.user;
     const todoList = todo.todo;
-    const [click, setClick] = useState(false);
+    const userId = user.user._id;
     const socket = io("ws://localhost:8900");
 
     const handleLogOut = async () => {
@@ -24,6 +25,7 @@ const TodoListPage = () => {
     const handleChangeStauts = (id, content) => {
         const data = { id, content };
         socket.emit("changeStatus", data);
+        dispatch(getTodoRequest({ id: userId }));
     };
 
     return (
@@ -38,10 +40,11 @@ const TodoListPage = () => {
                 <div className="todoList-List-Main">
                     {todoList?.length
                         ? todoList.map((item, i) => {
+                              const todoStatus = item.status;
                               return (
                                   <div key={i} className="todoList-List">
                                       <div className="todoList-List-header">
-                                          {click ? (
+                                          {todoStatus ? (
                                               <RiCheckboxBlankCircleFill
                                                   onClick={() =>
                                                       handleChangeStauts(

@@ -14,6 +14,7 @@ const DeletePage = (props) => {
         <div className="deletePage-Main">
             <div className="deletePage-Header">
                 <label>Delete</label>
+                <p></p>
             </div>
             <div className="deletePage-Body">
                 <button
